@@ -7,7 +7,7 @@ public class CafeControl {
 		Menu menu=new Menu();	
 		Order order=new Order();
 //		menu.display();		
-		
+		//z
 		System.out.println("프로그램시작");		
 		System.out.println("X:종료,M:메뉴관리,O:주문관리,S:실적관리");	
 		String str;		
