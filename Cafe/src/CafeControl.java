@@ -5,7 +5,7 @@ public class CafeControl {
 
 	public static void main(String[] args) {			
 		Menu menu=new Menu();	
-		Order order=new Order();
+		Order order=new Order();//1
 //		menu.display();		
 		//z
 		System.out.println("프로그램시작");		
