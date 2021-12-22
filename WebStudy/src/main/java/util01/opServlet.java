@@ -1,0 +1,60 @@
+package util01;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class opServlet
+ */
+@WebServlet("/opServlet")
+public class opServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public opServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html; char=utf-8");
+		PrintWriter out=response.getWriter();
+		String value_1=req.getParameter("value_1");
+		String value_2=req.getParameter("value_2");
+		String sel=req.getParameter("sel");
+		int result=0;
+		int v1=Integer.parseInt(value_1);
+		int v2=Integer.parseInt(value_2);		
+		if(sel.equals("+")) {
+			result=v1+v2;
+		}else if(sel.equals("-")) {
+			result=v1-v2;
+		}
+		else if(sel.equals("*")) {
+			result=v1*v2;
+		}else {
+			result=v1/v2;
+		}		
+		String outstr="<html><head><title>연산</title></head><body>";		
+		out.println(outstr+"value1 :"+v1+"<br>"+"value2 :"+v2+"<br>"+
+					"operator :"+sel+"<br>"+"result :"+result+"</body></html>");
+	}
+}
