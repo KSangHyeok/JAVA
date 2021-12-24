@@ -7,7 +7,7 @@
 <title>operator</title>
 </head>
 <body>
-<form method="POST" action="opServlet">
+<form method="POST" action="operator_bk.jsp">
 <table>
 <tr><td>value1:<input type=text id=value_1 name=value_1></td></tr>
 <tr><td>value2:<input type=text id=value_2 name=value_2></td></tr>
