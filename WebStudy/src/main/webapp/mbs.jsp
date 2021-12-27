@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<form method=post action="mbs_check.jsp" id=frmSignon>
  <table align=center>
         <tr>
             <td align=left>실명</td>
@@ -41,24 +42,40 @@
         <tr>
             <td colspan=2>
                 <input type=submit value='가입완료'> &nbsp;&nbsp;
-                <input type=reset value='지우기'>
+                <input type=button id=btnCan value='취소'>
                 
             </td>
         </tr>
     </table>
+    </form>
 </body>
 <script src='https://code.jquery.com/jquery-3.5.0.js'></script>
 <script>
 $(document)
-.on('submit',function(){
-	if($('#idname').val()==''){
-		alert('아이디가 입력되지않았습니다.');
+.on('submit','#frmsignon',function(){
+	if($('input[name=realname]').val()==''){
+		alert("이름없다");
 		return false;
-	}else if($('#passcode').val()==''){
-		alert('비밀번호가 입력되지않았습니다.');
+	}else if($('input:radio[name=gender]').id('checkd'==false){
+		alert("성별없다");
 		return false;
-	}else{return true}
-}
+	}else if($('input[name=idname]').val()==''){
+		alert("아이디없다");
+		return false;
+	}else if($('input[name=password]').val()==''){
+		alert("비밀번호 없다");
+		return false;
+	}else if($('input[name=password]').val()==''){
+		alert("비밀번호 확인해라");
+		return false;
+	}else if($('input:checkbox[name=interest]').id(':checkd')==false){
+		alert("관심분야 없다");
+		return false;
+	}
+	return true;
+})
+.on('click','#btnCan',function(){
+	document.location="home.jsp";
 })
 </script>
 </html>
