@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<%
+	request.removeAttribute("userid");
+response.sendRedirect("home.jsp");
+// 	request.getRequestDispatcher("home.jsp").forward(request,response);
+	%>
 </body>
 </html>

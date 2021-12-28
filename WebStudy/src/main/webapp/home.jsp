@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Home</title>
 </head>
-<body>
+<body align=right>
 <%
 if(request.getAttribute("userid")==null){
 	out.print("<a href='login_1.jsp'>로그인</a>"+"&nbsp"+"<a href='mbs.jsp'>회원가입</a>");

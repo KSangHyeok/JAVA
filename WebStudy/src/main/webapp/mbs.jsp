@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form method=post action="mbs_check.jsp" id=frmSignon>
+<form method=post action="mbs_check.jsp">
  <table align=center>
         <tr>
             <td align=left>실명</td>
@@ -52,27 +52,29 @@
 <script src='https://code.jquery.com/jquery-3.5.0.js'></script>
 <script>
 $(document)
-.on('submit','#frmsignon',function(){
-	if($('input[name=realname]').val()==''){
+.on('submit',function(){
+	if($('#realname').val()==''){
 		alert("이름없다");
 		return false;
-	}else if($('input:radio[name=gender]').id('checkd'==false){
+	}else if($('input[name=gender]:checked').val()==undefined){
 		alert("성별없다");
 		return false;
-	}else if($('input[name=idname]').val()==''){
+	}else if($('#idname').val()==''){
 		alert("아이디없다");
 		return false;
-	}else if($('input[name=password]').val()==''){
+	}else if($('#passcode').val()==''){
 		alert("비밀번호 없다");
 		return false;
-	}else if($('input[name=password]').val()==''){
+	}else if($('#passcode1').val()==''){
 		alert("비밀번호 확인해라");
 		return false;
-	}else if($('input:checkbox[name=interest]').id(':checkd')==false){
+	}else if($('#passcode').val() !=$('#passcode1').val()){
+		alert("달라~");
+		return false;	
+	}else if($('input[name=interest]:checked').val()==undefined){
 		alert("관심분야 없다");
 		return false;
-	}
-	return true;
+	}else return true;
 })
 .on('click','#btnCan',function(){
 	document.location="home.jsp";
