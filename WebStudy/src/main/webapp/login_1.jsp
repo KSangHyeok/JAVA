@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ page session="true" %>
 <%-- <% --%>
 <!-- // String name_login= (String)request.getAttribute("name_login"); -->
 <!-- // String passcode_login= (String)request.getAttribute("passcode_login"); -->
@@ -21,7 +22,10 @@ td {border:1px solid green;}
 <tr><td>비밀번호</td><td><input type=password id=pw name=passcode></td></tr>
 <tr><td colspan=2><input type=submit value='로그인'>&nbsp;
             <input type=button id=btnCan_h value='취소'></td></tr>
-            <tr><td colspan=2 align=right><a href=mbs.jsp>회원가입</a></td>          
+            <tr><td colspan=2 align=right><a href=mbs.jsp>회원가입</a></td></tr>
+            <tr><td>
+            <%=session.getAttribute("userid")%> , <%=session.getAttribute("passcode")%>
+            </td></tr>      
 </table>
 </form>
 </body>
@@ -40,11 +44,12 @@ $(document)
 	}else if($('#pw').val()==''){
 		alert('비밀번호가 입력되지않았습니다.');
 		return false;
-	}else if($('#id').val()!="<%=request.getAttribute("name_login")%>" || $('#pw').val()!="<%=request.getAttribute("passcode_login")%>"){
+	}else if($('#id').val()!="<%=session.getAttribute("userid")%>" || $('#pw').val()!="<%=session.getAttribute("passcode")%>"){
 		alert("아이디 또는 비밀번호가 틀렸");
 		return false;
 	}else{
 		alert("로그인굿");
+		
 		return true;
 	}
 })
