@@ -7,14 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-<% 
-	out.println("firstPage.jsp<br>");
-	out.println("하나의 PAGE속성:"+pageContext.getAttribute("name")+"<br>");
-	out.println("하나의 REQUEST속성:"+request.getAttribute("name")+"<br>");
-	out.println("하나의 SESSION속성:"+session.getAttribute("name")+"<br>");
-	out.println("하나의 APLLIATION속성:"+application.getAttribute("name")+"<br>");
-	String hyper="07_thirdpage.jsp?name="+request.getAttribute("name");
-	%>
-	<a href="<%=hyper%>">또 다른 페이지(third page)</a>
+secondPage.jsp<br>
+	하나의 PAGE속성:${pageScope.name}<br>
+	하나의 REQUEST속성:${requestScope.name}<br>
+	하나의 SESSION속성:${sessionScope.name}<br>
+	하나의 APLLIATION속성:${applicationScope.name}<br>	
+	<a href="07_thirdpage.jsp?name=${requestScope.name}">또 다른 페이지(third page)</a>
 </body>
 </html>

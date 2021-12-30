@@ -2,13 +2,14 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+<link rel='stylesheet' type='text/css' href='login.css'>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
+<body class="mbs_body"><b>
 <form method=post action="mbs_check.jsp">
- <table align=center>
+ <table align=center class="mbs_table">
         <tr>
             <td align=left>실명</td>
             <td><input type=text id=realname name=realname></td>
@@ -48,6 +49,7 @@
         </tr>
     </table>
     </form>
+    </b>
 </body>
 <script src='https://code.jquery.com/jquery-3.5.0.js'></script>
 <script>

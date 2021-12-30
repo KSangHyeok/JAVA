@@ -8,24 +8,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel='stylesheet' type='text/css' href='login.css'>
 <style>
-table {border-collapse:collapse}
-td {border:1px solid green;}
+/* table {border-collapse:collapse} */
+/* td {border:1px solid green;} */
 </style>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
+<body class=login_body>
 <form method=post action="login_check.jsp">
-<table align=center>
+<table align="center" valign="middle" class=login_table>
 <tr><td>아이디</td><td><input type=text id=id name=userid></td></tr>
 <tr><td>비밀번호</td><td><input type=password id=pw name=passcode></td></tr>
-<tr><td colspan=2><input type=submit value='로그인'>&nbsp;
+<tr><td class=a>	<input type=submit value='로그인' >&nbsp;			
             <input type=button id=btnCan_h value='취소'></td></tr>
             <tr><td colspan=2 align=right><a href=mbs.jsp>회원가입</a></td></tr>
-            <tr><td>
-            <%=session.getAttribute("userid")%> , <%=session.getAttribute("passcode")%>
-            </td></tr>      
+<!--             <tr><td> -->
+<%--             <%=session.getAttribute("userid")%> , <%=session.getAttribute("passcode")%> --%>
+<!--             </td></tr>       -->
 </table>
 </form>
 </body>

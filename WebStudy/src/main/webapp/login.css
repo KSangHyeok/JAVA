@@ -1,0 +1,35 @@
+@charset "utf-8";
+.home_body {
+	background-image:url(https://w.namu.la/s/b86c4a17b8c818c7824c90f5df8c7f2978bd105938edd23dd8239fa6739c89b1de6441f716c194d68823ba071ebfc754bc718530361369ec43d140049898435d7f7ea9eb06449fa1557cca0b023100e3);
+	background-size:cover;
+}
+.login_body {
+	background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKcICrll4aVbtD4nqk2PAeQtzX-kTu5_xdPw&usqp=CAU);
+	background-size:scale-down;
+	background-position:center;
+	background-repeat:no-repeat;	
+
+	
+}
+.login_login {
+	background-image:url(http://image.auction.co.kr/itemimage/dd/0e/60/dd0e60c36.jpg);
+	background-size:cover;	
+}
+.footer{
+	height: 50px;
+	margin-top:800px;
+	align:center;
+	font-size:30px;
+}
+.header{
+	color:blue;	
+}
+.mbs_body{
+	background-image:url(https://pds.joongang.co.kr//news/component/htmlphoto_mmdata/201711/27/61f78e51-2494-422e-a7e7-3f704466f6a6.jpg);
+	background-size:cover;	
+	background-repeat:no-repeat;
+	color:white;
+}
+/* .mbs_table{ */
+/* 	color:black; */
+/* } */
