@@ -28,10 +28,10 @@ class Person<T, S> {
 	}
 }
 
-class Person{
-	public EmployeeInfo info;
-	public int id;
-}
+//class Person{
+//	public EmployeeInfo info;
+//	public int id;
+//}
 
 class StudentInfo {
 	public int grade;
