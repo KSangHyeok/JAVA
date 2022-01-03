@@ -17,7 +17,7 @@ public class GenericSample {
 
 	}
 
-}
+}//asdfsadfs
 class Person<T, S> {
 	public T info;
 	public S id;
